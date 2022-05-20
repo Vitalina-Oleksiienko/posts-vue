@@ -1,7 +1,12 @@
 <template>
   <div class="content">
     <HeaderApp></HeaderApp>
-    <PostItem />
+    <PostsItem
+      :id="posts.id"
+      :userId="posts.userId"
+      :title="posts.title"
+      :body="posts.body"
+    />
 
     <FooterApp />
   </div>
@@ -10,14 +15,24 @@
 <script>
 import FooterApp from "./components/FooterApp.vue";
 import HeaderApp from "./components/HeaderApp.vue";
-import PostItem from "./components/posts/PostItem.vue";
+import PostsItem from "./components/posts/PostsItem.vue";
 
 export default {
   name: "App",
   components: {
     HeaderApp,
-    PostItem,
+    PostsItem,
     FooterApp,
+  },
+  data() {
+    return {
+      posts: {
+        id: 1,
+        title: "lorem",
+        body: "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
+        userId: 1,
+      },
+    };
   },
 };
 </script>
