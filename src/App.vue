@@ -1,26 +1,23 @@
 <template>
-  <HeaderApp></HeaderApp>
   <div class="content">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <BtnLoadMore></BtnLoadMore>
+    <HeaderApp></HeaderApp>
+    <PostItem />
+
     <FooterApp />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import BtnLoadMore from "./components/BtnLoadMore.vue";
 import FooterApp from "./components/FooterApp.vue";
 import HeaderApp from "./components/HeaderApp.vue";
+import PostItem from "./components/posts/PostItem.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
-    BtnLoadMore,
-    FooterApp,
     HeaderApp,
+    PostItem,
+    FooterApp,
   },
 };
 </script>

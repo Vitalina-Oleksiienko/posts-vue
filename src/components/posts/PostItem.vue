@@ -1,0 +1,82 @@
+<template>
+  <div class="posts-item">
+    <div class="posts-item__content">
+      <p class="posts-item__id">
+        ID:
+        {{ id }}
+      </p>
+      <p class="posts-item__userId">
+        UserID:
+        {{ userId }}
+      </p>
+      <p class="posts-item__title">
+        Title:
+        {{ title }}
+      </p>
+      <p class="posts-item__body">
+        Body:
+        {{ body }}
+      </p>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "PostItem",
+  props: {
+    id: {
+      type: Number,
+      default: 0,
+    },
+    userId: {
+      type: Number,
+      default: 0,
+    },
+    title: {
+      type: String,
+      default: "",
+    },
+    body: {
+      type: String,
+      default: "",
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.posts-item {
+  position: relative;
+  max-width: 350px;
+  padding: 0 20px;
+  margin-bottom: 30px;
+
+  &__content {
+    padding: 20px;
+    background: rgb(120, 182, 182);
+    min-height: 200px;
+    text-align: left;
+    cursor: pointer;
+    z-index: 1;
+  }
+  &__id {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  &__userId {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  &__body {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+}
+</style>
