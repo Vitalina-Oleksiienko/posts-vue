@@ -78,6 +78,8 @@ export default {
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 20px;
+    // max-height: calc(1em * 1.4 * 4);
+    // overflow: hidden;
   }
 }
 </style>

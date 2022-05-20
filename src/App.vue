@@ -23,12 +23,7 @@ export default {
   data() {
     return {
       posts,
-      // post: {
-      //   id: 1,
-      //   title: "lorem",
-      //   body: "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
-      //   userId: 1,
-      // },
+     
     };
   },
 };
