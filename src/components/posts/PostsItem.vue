@@ -1,5 +1,5 @@
 <template>
-  <div class="posts-item">
+  <div class="posts-item" @click="go">
     <div class="posts-item__content">
       <p class="posts-item__id">
         ID:
@@ -40,6 +40,11 @@ export default {
     body: {
       type: String,
       default: "",
+    },
+  },
+  methods: {
+    log() {
+      console.log("click");
     },
   },
 };
