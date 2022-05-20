@@ -13,6 +13,7 @@
 
 <script>
 import PostsItem from "./PostsItem";
+
 export default {
   name: "PostsList",
   components: {
