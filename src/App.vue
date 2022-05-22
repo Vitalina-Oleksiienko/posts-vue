@@ -1,6 +1,7 @@
 <template>
   <div class="content">
     <HeaderApp></HeaderApp>
+    <router-view></router-view>
     <PostsList :items="posts" />
 
     <FooterApp />
@@ -23,7 +24,6 @@ export default {
   data() {
     return {
       posts,
-     
     };
   },
 };

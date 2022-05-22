@@ -1,5 +1,7 @@
 <template>
-  <div>iformation about post</div>
+  <div>
+    <h2>iformation about post</h2>
+  </div>
 </template>
 
 <script>

@@ -27,6 +27,12 @@
 // createApp(SimpleRouterApp).mount('#app')
 
 import { createApp } from "vue";
-import App from './App.vue'
+import App from './App.vue';
+import router from './router.js';
 
-createApp(App).mount('#app')
+// const app = createApp(App);
+// app.use.apply(routes);
+// app.mount('#app');
+createApp(App)
+    .use(router)
+    .mount('#app');
