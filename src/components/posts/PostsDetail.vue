@@ -1,0 +1,42 @@
+<template>
+  <section>
+    <div class="posts-item">
+      <div class="posts-item__content">
+        <p class="posts-item__id">
+          ID:
+          {{ id }}
+        </p>
+        <p class="posts-item__userId">
+          UserID:
+          {{ userId }}
+        </p>
+        <p class="posts-item__title">
+          Title:
+          {{ title }}
+        </p>
+        <p class="posts-item__body">
+          Body:
+          {{ body }}
+        </p>
+      </div>
+    </div>
+    <div>
+      <p>Comments:</p>
+      <p>Info:</p>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  name: "PostsDetail",
+  props: {
+    details: {
+      type: Object,
+      required: true,
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped></style>
