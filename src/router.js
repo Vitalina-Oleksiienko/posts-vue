@@ -8,22 +8,17 @@ export default createRouter({
     history: createWebHashHistory(process.env.BASE_URL),
     
     routes: [
-        {
+    {
         path: '/home',
         component: HomePage,
-            alias: '/',
+        alias: '/',
         name: 'home',
     },
     {
         path: '/post/ :id',
         component: ItemPage,
         name: 'post',
-        },
-    //     {
-    //         path: '*',
-    //         component: ErrorPage,
-    //         name: 'error-page',
-    // }
+    },
     ],   
 })
 
