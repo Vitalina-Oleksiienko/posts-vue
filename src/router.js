@@ -29,7 +29,3 @@ export default createRouter({
 
 
 
-// export default {
-//   '/': 'HomePage',
-//   '/item': 'ItemPage'
-// }
