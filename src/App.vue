@@ -1,8 +1,8 @@
 <template>
   <div class="content">
     <HeaderApp></HeaderApp>
+
     <router-view></router-view>
-    <PostsList :items="posts" />
 
     <FooterApp />
   </div>
@@ -11,14 +11,12 @@
 <script>
 import FooterApp from "./components/FooterApp.vue";
 import HeaderApp from "./components/HeaderApp.vue";
-import PostsList from "./components/posts/PostsList.vue";
 import posts from "./components/posts/posts";
 
 export default {
   name: "App",
   components: {
     HeaderApp,
-    PostsList,
     FooterApp,
   },
   data() {
@@ -44,5 +42,9 @@ export default {
 .content {
   flex-grow: 1;
   padding-top: 120px;
+}
+
+a {
+  text-decoration: none;
 }
 </style>

@@ -1,20 +1,25 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomePage from './pages/HomePage.vue';
 import ItemPage from './pages/ItemPage.vue';
+ 
 
 export default createRouter({
     history: createWebHashHistory(),
+    
     routes: [
         {
         path: '/home',
-            component: HomePage,
-        alias: '/'
+        component: HomePage,
+            alias: '/',
+        name: 'home'
     },
     {
-        path: '/itemPage',
-        component: ItemPage
-    }
+        path: '/post/ :id',
+        component: ItemPage,
+        name: 'post'
+    } 
     ]
+    
 })
 
 

@@ -1,11 +1,19 @@
 <template>
   <div>
-    <h2>iformation about post</h2>
+    <MainContainer>
+      <h2>iformation about post</h2>
+    </MainContainer>
   </div>
 </template>
 
 <script>
-export default {};
+import MainContainer from "@/components/shared/MainContainer.vue";
+export default {
+  name: "ItemPage",
+  components: {
+    MainContainer,
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>

@@ -17,6 +17,10 @@
         Body:
         {{ body }}
       </p>
+      <router-link
+        :to="{ name: 'post', params: { id } }"
+        class="posts-item__link"
+      ></router-link>
     </div>
   </div>
 </template>
@@ -63,12 +67,14 @@ export default {
     min-height: 200px;
     text-align: left;
     line-height: 1.4;
+
     cursor: pointer;
     z-index: 1;
   }
   &__id {
     font-size: 20px;
     font-weight: 400;
+    text-decoration: none;
   }
   &__userId {
     font-size: 20px;
@@ -85,6 +91,13 @@ export default {
     margin-bottom: 20px;
     // max-height: calc(1em * 1.4 * 4);
     // overflow: hidden;
+  }
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 </style>

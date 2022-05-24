@@ -1,11 +1,28 @@
 <template>
-  <div>
-    <h1>Home page</h1>
-  </div>
+  <main class="homepage">
+    <MainContainer>
+      <PostsList :items="posts" :id="posts.id" />
+    </MainContainer>
+  </main>
 </template>
 
 <script>
-export default {};
+import PostsList from "@/components/posts/PostsList.vue";
+import posts from "@/components/posts/posts.js";
+import MainContainer from "@/components/shared/MainContainer.vue";
+
+export default {
+  name: "HomePage",
+  components: {
+    PostsList,
+    MainContainer,
+  },
+  data() {
+    return {
+      posts,
+    };
+  },
+};
 </script>
 
-<style lang="scss" scoped></style>
+<style></style>
