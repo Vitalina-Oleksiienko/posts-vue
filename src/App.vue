@@ -43,8 +43,4 @@ export default {
   flex-grow: 1;
   padding-top: 120px;
 }
-
-a {
-  text-decoration: none;
-}
 </style>
