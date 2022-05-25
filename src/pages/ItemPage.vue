@@ -20,11 +20,11 @@ export default {
   },
   computed: {
     post() {
-      return posts.find((post) => post.id === this.$route.params.id);
+      return posts.find((post) => post.id == this.$route.params.id);
     },
   },
   mounted() {
-    console.log(posts);
+    console.log(this.post);
   },
 };
 </script>
