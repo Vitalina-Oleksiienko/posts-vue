@@ -30,8 +30,8 @@ export default {
   name: "PostsItem",
   props: {
     id: {
-      type: Number,
-      default: 0,
+      type: String,
+      required: true,
     },
     userId: {
       type: Number,
