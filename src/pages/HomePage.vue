@@ -1,14 +1,14 @@
 <template>
   <main class="homepage">
     <MainContainer>
-      <PostsList :items="posts" :id="posts.id" />
+      <PostsList :items="posts" :id="posts" /> /*:id="posts.id" */
     </MainContainer>
   </main>
 </template>
 
 <script>
 import PostsList from "@/components/posts/PostsList.vue";
-import posts from "@/components/posts/posts.js";
+//import posts from "@/components/posts/posts.js";
 import MainContainer from "@/components/shared/MainContainer.vue";
 import { getPostsList } from "@/services/posts.service";
 
@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      posts,
+      posts: null,
     };
   },
   async created() {
