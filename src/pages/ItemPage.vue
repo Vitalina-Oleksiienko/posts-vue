@@ -31,10 +31,10 @@ export default {
   //     return posts.find((post) => post.id == this.$route.params.id);
   //   },
   // },
-  mounted() {
-    console.log(this.post);
-    console.log(this.$route);
-  },
+  // mounted() {
+  //   console.log(this.post);
+  //   console.log(this.$route);
+  // },
   async created() {
     try {
       const { id } = this.$route.params;

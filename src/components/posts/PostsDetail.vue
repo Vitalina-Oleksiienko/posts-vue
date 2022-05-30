@@ -4,19 +4,19 @@
       <div class="posts-item__content">
         <p class="posts-item__id">
           ID:
-          {{ id }}
+          {{ details.id }}
         </p>
         <p class="posts-item__userId">
           UserID:
-          {{ userId }}
+          {{ details.userId }}
         </p>
         <p class="posts-item__title">
           Title:
-          {{ title }}
+          {{ details.title }}
         </p>
         <p class="posts-item__body">
           Body:
-          {{ body }}
+          {{ details.body }}
         </p>
       </div>
     </div>
