@@ -1,16 +1,19 @@
 <template>
   <main>
     <MainContainer>
-      <h2>iformation about post</h2>
-      <PostsDetail :details="post" />
+      <div v-if="post">
+        <h2>iformation about post</h2>
+        <PostsDetail :details="post" />
+      </div>
     </MainContainer>
   </main>
 </template>
 
 <script>
 import MainContainer from "@/components/shared/MainContainer.vue";
-import posts from "@/components/posts/posts.js";
+//import posts from "@/components/posts/posts.js";
 import PostsDetail from "../components/posts/PostsDetail.vue";
+import { getPostsById } from "@/services/posts.service";
 
 export default {
   name: "ItemPage",
@@ -18,14 +21,28 @@ export default {
     MainContainer,
     PostsDetail,
   },
-  computed: {
-    post() {
-      return posts.find((post) => post.id == this.$route.params.id);
-    },
+  data() {
+    return {
+      post: null,
+    };
   },
+  // computed: {
+  //   post() {
+  //     return posts.find((post) => post.id == this.$route.params.id);
+  //   },
+  // },
   mounted() {
     console.log(this.post);
     console.log(this.$route);
+  },
+  async created() {
+    try {
+      const { id } = this.$route.params;
+      const { data } = await getPostsById(id);
+      this.post = data;
+    } catch (error) {
+      console.log(error);
+    }
   },
 };
 </script>
