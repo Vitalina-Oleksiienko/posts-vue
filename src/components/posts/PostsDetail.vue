@@ -21,7 +21,10 @@
       </div>
     </div>
     <div>
-      <p>Comments:</p>
+      <p>
+        Comments:
+        {{ name }}
+      </p>
       <p>Info:</p>
     </div>
   </section>

@@ -14,6 +14,7 @@ import MainContainer from "@/components/shared/MainContainer.vue";
 //import posts from "@/components/posts/posts.js";
 import PostsDetail from "../components/posts/PostsDetail.vue";
 import { getPostsById } from "@/services/posts.service";
+//import { getComments } from "@/services/posts.service";
 
 export default {
   name: "ItemPage",
@@ -44,6 +45,15 @@ export default {
       console.log(error);
     }
   },
+  // async created() {
+  //   try {
+  //     const { id } = this.$route.params;
+  //     const { data } = await getComments(id);
+  //     this.posts = data;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // },
 };
 </script>
 

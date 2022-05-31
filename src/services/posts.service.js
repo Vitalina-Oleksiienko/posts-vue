@@ -7,3 +7,7 @@ export const getPostsList = () => {
 export const getPostsById = (id) => {
     return axios.get(`/posts/${id}`);
 };
+
+export const getComments = (id) => {
+    return axios.get(`/posts/${id}/comments`)
+};
