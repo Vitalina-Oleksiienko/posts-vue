@@ -7,9 +7,7 @@
         <PostsDetail :details="post" />
       </div>
       <div v-for="postComment in comments" :key="postComment">
-        <PostComments :comments="comments" />
-
-        {{ postComment }}
+        <PostComments :comments="comments">{{ postComment }}</PostComments>
       </div>
     </MainContainer>
   </main>
@@ -17,14 +15,10 @@
 
 <script>
 import MainContainer from "@/components/shared/MainContainer.vue";
-//import posts from "@/components/posts/posts.js";
 import PostsDetail from "../components/posts/PostsDetail.vue";
 import PostComments from "@/components/posts/PostComments.vue";
-//import { getPostsById } from "@/services/posts.service";
 import axios from "axios";
 import { getPostsById } from "@/services/posts.service";
-//import PostComments from "@/components/posts/PostComments.vue";
-//import { getComments } from "@/services/posts.service";
 
 export default {
   name: "ItemPage",
@@ -36,7 +30,7 @@ export default {
   data() {
     return {
       post: null,
-      comments: [],
+      comments: [this.postId],
       postId: 1,
     };
   },
