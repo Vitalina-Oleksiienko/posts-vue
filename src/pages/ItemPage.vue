@@ -88,7 +88,7 @@ export default {
   },
   mounted() {
     this.fetchComments();
-    //this.getPostsById;
+    this.getPostsById;
   },
   // async created() {
   //   try {
