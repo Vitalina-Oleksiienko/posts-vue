@@ -18,7 +18,7 @@
         {{ body }}
       </p>
       <router-link
-        :to="{ name: 'post', params: { id }, query: { title } }"
+        :to="{ name: 'post', params: { id, postId }, query: { title } }"
         class="posts-item__link"
       ></router-link>
     </div>
@@ -36,6 +36,10 @@ export default {
     userId: {
       type: Number,
       default: 0,
+    },
+    postId: {
+      type: String,
+      required: true,
     },
     title: {
       type: String,

@@ -25,7 +25,10 @@
         Comments:
         {{ name }}
       </p>
-      <p>Info:</p>
+      <p>
+        Info:
+        {{ postId }}
+      </p>
     </div>
   </section>
 </template>
@@ -35,6 +38,10 @@ export default {
   name: "PostsDetail",
   props: {
     details: {
+      type: Object,
+      required: true,
+    },
+    comments: {
       type: Object,
       required: true,
     },
