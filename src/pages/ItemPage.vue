@@ -1,6 +1,7 @@
 <template>
   <main>
     <MainContainer>
+      <router-link to="/home">go back</router-link>
       <div v-if="post">
         <h2>iformation about post</h2>
         <PostsDetail :details="post" />
