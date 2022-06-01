@@ -21,9 +21,7 @@
 
 <script>
 import PostsList from "@/components/posts/PostsList.vue";
-//import posts from "@/components/posts/posts.js";
 import MainContainer from "@/components/shared/MainContainer.vue";
-//import { getPostsList } from "@/services/posts.service";
 import axios from "axios";
 
 export default {
@@ -43,7 +41,7 @@ export default {
   methods: {
     changePage(pageNumber) {
       this.page = pageNumber;
-      this.fetchPosts();
+      //this.fetchPosts();
     },
     async fetchPosts() {
       try {
@@ -67,6 +65,11 @@ export default {
   },
   mounted() {
     this.fetchPosts();
+  },
+  watch: {
+    page() {
+      this.fetchPosts();
+    },
   },
   // async created() {
   //   try {

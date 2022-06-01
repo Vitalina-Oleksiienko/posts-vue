@@ -5,6 +5,11 @@
         <h2>iformation about post</h2>
         <PostsDetail :details="post" />
       </div>
+      <div v-for="postComment in comments" :key="postComment">
+        <PostComments :comments="comments" />
+
+        {{ postComment }}
+      </div>
     </MainContainer>
   </main>
 </template>
@@ -13,21 +18,61 @@
 import MainContainer from "@/components/shared/MainContainer.vue";
 //import posts from "@/components/posts/posts.js";
 import PostsDetail from "../components/posts/PostsDetail.vue";
+import PostComments from "@/components/posts/PostComments.vue";
+//import { getPostsById } from "@/services/posts.service";
+import axios from "axios";
 import { getPostsById } from "@/services/posts.service";
-import { getComments } from "@/services/posts.service";
+//import PostComments from "@/components/posts/PostComments.vue";
+//import { getComments } from "@/services/posts.service";
 
 export default {
   name: "ItemPage",
   components: {
     MainContainer,
     PostsDetail,
+    PostComments,
   },
   data() {
     return {
       post: null,
-      comment: [],
+      comments: [],
+      postId: 1,
     };
   },
+  methods: {
+    async fetchComments() {
+      try {
+        const response = await axios.get(
+          "https://jsonplaceholder.typicode.com/comments",
+          {
+            params: {
+              postId: this.postId,
+            },
+          }
+        );
+        this.comment = response.data;
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    // async getPostsById() {
+    //   try {
+    //     const { id } = this.$route.params;
+    //     const responsePost = await axios.get(
+    //       `https://jsonplaceholder.typicode.com/posts/`,
+    //       {
+    //         params: {
+    //           id: this.id,
+    //         },
+    //       }
+    //     );
+    //     this.post = responsePost.data;
+    //   } catch (error) {
+    //     console.error(error);
+    //   }
+    // },
+  },
+
   // computed: {
   //   post() {
   //     return posts.find((post) => post.id == this.$route.params.id);
@@ -42,13 +87,13 @@ export default {
       const { id } = this.$route.params;
       const { data } = await getPostsById(id);
       this.post = data;
-
-      const { postId } = this.$route.params;
-      const { comments } = await getComments(postId);
-      this.comment = comments;
     } catch (error) {
       console.log(error);
     }
+  },
+  mounted() {
+    this.fetchComments();
+    //this.getPostsById;
   },
   // async created() {
   //   try {

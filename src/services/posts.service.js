@@ -8,6 +8,6 @@ export const getPostsById = (id) => {
     return axios.get(`/posts/${id}`);
 };
 
-export const getComments = () => {
-    return axios.get(`/comments`)
-};
+// export const getComments = () => {
+//     return axios.get(`/comments`)
+// };
