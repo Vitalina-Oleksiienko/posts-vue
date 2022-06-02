@@ -51,22 +51,6 @@ export default {
         console.error(error);
       }
     },
-    // async getPostsById() {
-    //   try {
-    //     const { id } = this.$route.params;
-    //     const responsePost = await axios.get(
-    //       `https://jsonplaceholder.typicode.com/posts/`,
-    //       {
-    //         params: {
-    //           id: this.id,
-    //         },
-    //       }
-    //     );
-    //     this.post = responsePost.data;
-    //   } catch (error) {
-    //     console.error(error);
-    //   }
-    // },
   },
 
   // computed: {
