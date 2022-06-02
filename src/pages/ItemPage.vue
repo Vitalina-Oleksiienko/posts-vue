@@ -30,8 +30,8 @@ export default {
   data() {
     return {
       post: null,
-      comments: [this.postId],
-      postId: 1,
+      comments: [],
+      postId: null,
     };
   },
   methods: {
@@ -46,6 +46,7 @@ export default {
           }
         );
         this.comments = response.data;
+        console.log(this.comments);
       } catch (error) {
         console.error(error);
       }
@@ -79,8 +80,8 @@ export default {
   // },
   async created() {
     try {
-      const { id } = this.$route.params;
-      const { data } = await getPostsById(id);
+      this.postId = this.$route.params.id;
+      const { data } = await getPostsById(this.postId);
       this.post = data;
     } catch (error) {
       console.log(error);
