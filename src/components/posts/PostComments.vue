@@ -1,13 +1,17 @@
 <template>
   <div>
-    <div>
+    <div class="comments__list">
       <p>
         Comments:
+        {{ comments.id }}
+      </p>
+      <p>
+        User:
         {{ comments.name }}
       </p>
       <p>
         Info:
-        {{ comments.postId }}
+        {{ comments.email }}
       </p>
       <p>
         Body:
@@ -29,4 +33,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.comments__list {
+  border: 2px solid green;
+}
+</style>
