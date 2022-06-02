@@ -37,10 +37,6 @@ export default {
       type: Number,
       default: 0,
     },
-    postId: {
-      type: String,
-      required: true,
-    },
     title: {
       type: String,
       default: "",
