@@ -1,22 +1,10 @@
 <template>
   <div>
     <div class="comments__list">
-      <p>
-        Comments:
-        {{ comments.id }}
-      </p>
-      <p>
-        User:
-        {{ comments.name }}
-      </p>
-      <p>
-        Info:
-        {{ comments.email }}
-      </p>
-      <p>
-        Body:
-        {{ comments.body }}
-      </p>
+      <p>Comments №:{{ comments.id }}</p>
+      <p>User:{{ comments.name }}</p>
+      <p>Info:{{ comments.email }}</p>
+      <p>Body:{{ comments.body }}</p>
     </div>
   </div>
 </template>
