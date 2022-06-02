@@ -6,8 +6,8 @@
         <h2>iformation about post</h2>
         <PostsDetail :details="post" />
       </div>
-      <div v-for="postComment in comments" :key="postComment">
-        <PostComments :comments="comments">{{ postComment }}</PostComments>
+      <div v-for="(postComment, i) in comments" :key="i">
+        <PostComments v-if="postComment" :comments="postComment"></PostComments>
       </div>
     </MainContainer>
   </main>
@@ -45,7 +45,7 @@ export default {
             },
           }
         );
-        this.comment = response.data;
+        this.comments = response.data;
       } catch (error) {
         console.error(error);
       }
