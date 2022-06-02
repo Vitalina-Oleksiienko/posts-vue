@@ -36,5 +36,6 @@ export default {
 <style lang="scss" scoped>
 .comments__list {
   border: 2px solid green;
+  margin-bottom: 15px;
 }
 </style>
