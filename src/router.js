@@ -14,7 +14,7 @@ export default createRouter({
         name: 'home',
     },
     {
-        path: '/post/ :id',
+        path: '/post/:id',
         component: ItemPage,
         name: 'post',
     },

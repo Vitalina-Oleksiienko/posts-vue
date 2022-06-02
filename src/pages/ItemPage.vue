@@ -90,15 +90,6 @@ export default {
     this.fetchComments();
     this.getPostsById;
   },
-  // async created() {
-  //   try {
-  //     const { id } = this.$route.params;
-  //     const { data } = await getComments(id);
-  //     this.posts = data;
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // },
 };
 </script>
 

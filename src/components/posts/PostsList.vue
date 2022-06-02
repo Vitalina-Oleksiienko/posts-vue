@@ -2,12 +2,13 @@
   <MainContainer>
     <div class="posts-list">
       <PostsItem
-        v-for="{ id, userId, title, body } in items"
+        v-for="{ id, userId, title, body, postId } in items"
         :key="id"
         :id="id"
         :userId="userId"
         :title="title"
         :body="body"
+        :postId="postId"
         class="posts-list__item"
       />
     </div>
