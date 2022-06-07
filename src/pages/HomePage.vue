@@ -1,7 +1,7 @@
 <template>
   <main class="homepage">
     <MainContainer>
-      <PostsList :items="posts" :id="posts" /> /*:id="posts.id" */
+      <PostsList :items="posts" :id="posts" />
       <div class="page__wrapper">
         <div
           v-for="pageNumber in totalPages"

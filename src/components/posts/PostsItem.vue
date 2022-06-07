@@ -18,7 +18,7 @@
         {{ body }}
       </p>
       <router-link
-        :to="{ name: 'post', params: { id, postId }, query: { title } }"
+        :to="{ name: 'post', params: { id }, query: { title } }"
         class="posts-item__link"
       ></router-link>
     </div>
