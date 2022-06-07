@@ -71,22 +71,6 @@ export default {
       this.fetchPosts();
     },
   },
-  // async created() {
-  //   try {
-  //     const response = await getPostsList({
-  //       params: {
-  //         _page: this.page,
-  //         _limit: this.limit,
-  //       },
-  //     });
-  //     this.totalPages = Math.ceil(
-  //       response.headers["x-total-count"] / this.limit
-  //     );
-  //     this.posts = response.data;
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // },
 };
 </script>
 
