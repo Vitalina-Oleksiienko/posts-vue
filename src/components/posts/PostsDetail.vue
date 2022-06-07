@@ -12,7 +12,7 @@
 
       <ModalInfo v-model:show="dialogVisible">
         <div v-bind="infoUser" :key="infoUser">
-          <UserInfo :info="infoUser"></UserInfo>
+          <UserInfo :infoUser="info"></UserInfo>
         </div>
       </ModalInfo>
     </div>
@@ -21,6 +21,7 @@
 
 <script>
 //import axios from "axios";
+//v-bind="infoUser" :key="infoUser"
 import ModalInfo from "./ModalInfo.vue";
 import UserInfo from "./UserInfo.vue";
 import { getUserInfo } from "@/services/posts.service";
@@ -58,26 +59,8 @@ export default {
     showDialog() {
       this.dialogVisible = true;
     },
-    // async fetchUserInfo() {
-    //   try {
-    //     const response = await axios.get(
-    //       "https://jsonplaceholder.typicode.com/users",
-    //       {
-    //         params: {
-    //           userId: this.id,
-    //         },
-    //       }
-    //     );
-    //     this.userId = this.$route.params.id;
-    //     this.info = response.data;
-    //     console.log(this.info);
-    //   } catch (error) {
-    //     console.error(error);
-    //   }
-    // },
   },
   mounted() {
-    //this.fetchUserInfo();
     this.getUserInfo;
   },
 };
