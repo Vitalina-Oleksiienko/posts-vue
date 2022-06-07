@@ -6,7 +6,6 @@
         <h2>iformation about post</h2>
         <PostsDetail :details="post" />
       </div>
-
       <div v-for="(postComment, i) in comments" :key="i">
         <PostComments v-if="postComment" :comments="postComment"></PostComments>
       </div>
