@@ -11,8 +11,8 @@
       </div>
 
       <ModalInfo v-model:show="dialogVisible">
-        <div>
-          <UserInfo :userData="info"></UserInfo>
+        <div v-bind="infoUser" :key="infoUser">
+          <UserInfo :info="infoUser"></UserInfo>
         </div>
       </ModalInfo>
     </div>
@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       dialogVisible: false,
-      info: {},
+      infoUser: null,
       userId: null,
     };
   },
