@@ -4,7 +4,7 @@
       <router-link to="/home">go back</router-link>
       <div v-if="post">
         <h2>iformation about post</h2>
-        <PostsDetail :details="post" />
+        <PostsDetail :details="post"> </PostsDetail>
       </div>
       <div v-for="(postComment, i) in comments" :key="i">
         <PostComments v-if="postComment" :comments="postComment"></PostComments>
@@ -71,6 +71,16 @@ export default {
       console.log(error);
     }
   },
+  // async created() {
+  //   try {
+  //     this.id = this.$route.params.userId;
+  //     const { userInfo } = await getUserInfo(this.id);
+  //     this.info = userInfo;
+  //     console.log(userInfo);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // },
   mounted() {
     this.fetchComments();
     this.getPostsById;

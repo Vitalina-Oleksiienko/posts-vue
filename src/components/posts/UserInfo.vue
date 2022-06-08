@@ -2,14 +2,14 @@
   <div>
     <div>
       <p>Name:{{ name }}</p>
-      <p>Username:{{ username }}</p>
+      <p>Username:{{ info.username }}</p>
       <ul>
         Address:
         <li>street:{{}}</li>
         <li>suite:{{}}</li>
         <li>city:{{}}</li>
       </ul>
-      <p>Phone: {{ phone }}</p>
+      <p>Phone: {{ info.phone }}</p>
       <p>Website: {{ website }}</p>
       <p>Company: {{}}</p>
     </div>
@@ -23,6 +23,9 @@ export default {
     info: {
       type: Object,
       required: true,
+      // default() {
+      //   return {};
+      // },
     },
   },
 };

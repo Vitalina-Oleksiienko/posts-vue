@@ -11,8 +11,8 @@
       </div>
 
       <ModalInfo v-model:show="dialogVisible">
-        <div v-bind="infoUsers" :key="infoUsers">
-          <UserInfo :infoUsers="info"></UserInfo>
+        <div v-if="infoUser">
+          <UserInfo :info="infoUser"></UserInfo>
         </div>
       </ModalInfo>
     </div>
@@ -22,6 +22,7 @@
 <script>
 //import axios from "axios";
 //v-bind="infoUser" :key="infoUser"
+//v-for="infoUser in infoUsers" :key="infoUser.id"
 import ModalInfo from "./ModalInfo.vue";
 import UserInfo from "./UserInfo.vue";
 import { getUserInfo } from "@/services/posts.service";
@@ -35,7 +36,7 @@ export default {
   data() {
     return {
       dialogVisible: false,
-      infoUsers: null,
+      infoUser: {},
       userId: null,
     };
   },
