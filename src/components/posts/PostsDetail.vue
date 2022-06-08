@@ -38,6 +38,7 @@ export default {
       dialogVisible: false,
       infoUser: {},
       userId: null,
+      id: null,
     };
   },
   props: {
@@ -48,10 +49,11 @@ export default {
   },
   async created() {
     try {
+      console.log("router:", this.$route.params);
       this.id = this.$route.params.userId;
-      const { userInfo } = await getUserInfo(this.id);
-      this.info = userInfo;
-      console.log(userInfo);
+      const infoUser = await getUserInfo(this.id);
+      this.infoUser = infoUser.data;
+      console.log(infoUser);
     } catch (error) {
       console.error(error);
     }

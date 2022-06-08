@@ -1,17 +1,18 @@
 <template>
   <div>
     <div>
-      <p>Name:{{ name }}</p>
+      <p>Name:{{ info.name }}</p>
       <p>Username:{{ info.username }}</p>
       <ul>
         Address:
-        <li>street:{{}}</li>
-        <li>suite:{{}}</li>
-        <li>city:{{}}</li>
+        <li>city:{{ info.address.city }}</li>
+        <li>street:{{ info.address.street }}</li>
+        <li>suite:{{ info.address.suite }}</li>
+        <li>zipcode:{{ info.address.zipcode }}</li>
       </ul>
       <p>Phone: {{ info.phone }}</p>
-      <p>Website: {{ website }}</p>
-      <p>Company: {{}}</p>
+      <p>Website: {{ info.website }}</p>
+      <p>Company: {{ info.company.name }}</p>
     </div>
   </div>
 </template>
@@ -23,12 +24,13 @@ export default {
     info: {
       type: Object,
       required: true,
-      // default() {
-      //   return {};
-      // },
     },
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+li {
+  list-style: none;
+}
+</style>
