@@ -91,7 +91,8 @@ export default {
 .page:not(:last-child) {
   margin-right: 5px;
 }
-.page:hover {
+.page:hover,
+.page:focus {
   border: 3px solid darkgreen;
 }
 .current-page {
