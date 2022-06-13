@@ -1,20 +1,20 @@
 <template>
   <div class="posts-item" @click="go">
     <div class="posts-item__content">
-      <p class="posts-item__id">
+      <!-- <p class="posts-item__id">
         ID:
         {{ id }}
-      </p>
+      </p> -->
       <p class="posts-item__userId">
-        UserID:
+        <i>UserID:</i>
         {{ userId }}
       </p>
       <p class="posts-item__title">
-        Title:
+        <i>Title:</i>
         {{ title }}
       </p>
       <p class="posts-item__body">
-        Body:
+        <i>Body:</i>
         {{ body }}
       </p>
       <router-link
@@ -79,6 +79,7 @@ export default {
   &__userId {
     font-size: 20px;
     font-weight: 400;
+    margin: 0;
   }
   &__title {
     font-size: 20px;
