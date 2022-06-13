@@ -63,6 +63,7 @@ export default {
 
   &__content {
     padding: 20px;
+    border-radius: 5px;
     background: rgb(120, 182, 182);
     min-height: 200px;
     text-align: left;
