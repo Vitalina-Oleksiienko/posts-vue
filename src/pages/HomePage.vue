@@ -78,15 +78,21 @@ export default {
 .page__wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  align-items: baseline;
+  margin: 10px 0 10px 0;
+
   cursor: pointer;
 }
 .page {
   border: 1px solid rgb(23, 65, 23);
+  border-radius: 5px 0 5px 0;
   padding: 10px;
 }
 .page:not(:last-child) {
   margin-right: 5px;
+}
+.page:hover {
+  border: 3px solid darkgreen;
 }
 .current-page {
   border: 3px solid darkgreen;
