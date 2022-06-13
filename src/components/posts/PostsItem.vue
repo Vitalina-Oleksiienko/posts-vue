@@ -1,10 +1,10 @@
 <template>
   <div class="posts-item" @click="go">
     <div class="posts-item__content">
-      <!-- <p class="posts-item__id">
+      <p class="posts-item__id">
         ID:
         {{ id }}
-      </p> -->
+      </p>
       <p class="posts-item__userId">
         <i>UserID:</i>
         {{ userId }}
