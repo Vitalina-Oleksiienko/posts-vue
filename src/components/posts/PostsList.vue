@@ -34,6 +34,7 @@ export default {
 .posts-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   margin-left: -15px;
   margin-right: -15px;
 
