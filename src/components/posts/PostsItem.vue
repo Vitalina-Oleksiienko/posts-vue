@@ -1,10 +1,10 @@
 <template>
   <div class="posts-item" @click="go">
     <div class="posts-item__content">
-      <p class="posts-item__id">
+      <!-- <p class="posts-item__id">
         ID:
         {{ id }}
-      </p>
+      </p> -->
       <p class="posts-item__userId">
         <i>UserID:</i>
         {{ userId }}
@@ -65,7 +65,7 @@ export default {
     padding: 20px;
     border-radius: 5px;
     background: rgb(120, 182, 182);
-    min-height: 200px;
+    //min-height: 200px;
     text-align: left;
     line-height: 1.4;
 
@@ -83,7 +83,7 @@ export default {
     margin: 0;
   }
   &__title {
-    font-size: 20px;
+    font-size: 10px;
     font-weight: 400;
     margin-bottom: 20px;
   }
@@ -91,8 +91,8 @@ export default {
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 20px;
-    // max-height: calc(1em * 1.4 * 4);
-    // overflow: hidden;
+    max-height: calc(1em * 1.4 * 4);
+    overflow: hidden;
   }
   &__link {
     position: absolute;

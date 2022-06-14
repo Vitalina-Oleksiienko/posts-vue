@@ -1,5 +1,5 @@
 <template>
-  <div class="posts-list">
+  <section class="posts-list">
     <PostsItem
       v-for="{ id, userId, title, body, postId } in items"
       :key="id"
@@ -10,7 +10,7 @@
       :postId="postId"
       class="posts-list__item"
     />
-  </div>
+  </section>
 </template>
 
 <script>
