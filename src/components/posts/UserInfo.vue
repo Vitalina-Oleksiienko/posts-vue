@@ -34,10 +34,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-li {
-  list-style: none;
-  //font-style: italic;
-}
 i {
   font-weight: 600;
 }

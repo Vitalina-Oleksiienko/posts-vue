@@ -91,7 +91,6 @@ export default {
 <style lang="scss" scoped>
 .btn-go-back {
   text-decoration: none;
-  //float: left;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -105,7 +104,7 @@ export default {
 }
 .btn-go-back:hover,
 .btn-go-back:focus {
-  background: rgba(0, 128, 0, 0.3);
+  background: linear-gradient(blue, yellow);
 }
 h2 {
   margin: 0 0 10px 0;

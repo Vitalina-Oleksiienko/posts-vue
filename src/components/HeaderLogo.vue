@@ -1,5 +1,11 @@
 <template>
-  <img class="logo" src="../assets/email.png" alt="logo" />
+  <router-link to="/home">
+    <img
+      class="logo"
+      src="../assets/interaction_conversation_communication_letter_email_mail_message_chat_icon_221265.png"
+      alt="logo"
+    />
+  </router-link>
 </template>
 
 <script>
@@ -10,7 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 .logo {
-  width: 6%;
+  width: 7%;
   height: 50%;
 }
 </style>

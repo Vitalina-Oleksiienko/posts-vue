@@ -67,13 +67,17 @@ export default {
     height: 280px;
     padding: 20px;
     border-radius: 5px;
-    background: rgb(120, 182, 182);
+
     //min-height: 200px;
     text-align: left;
     line-height: 1.4;
 
     cursor: pointer;
     z-index: 1;
+  }
+  &__content:hover,
+  &__content:focus {
+    background: linear-gradient(blue, yellow);
   }
   &__id {
     font-size: 20px;

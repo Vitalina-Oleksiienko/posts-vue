@@ -94,6 +94,7 @@ export default {
 .page:hover,
 .page:focus {
   border: 3px solid darkgreen;
+  background: linear-gradient(blue, yellow);
 }
 .current-page {
   border: 3px solid darkgreen;

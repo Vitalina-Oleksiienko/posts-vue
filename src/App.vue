@@ -43,4 +43,10 @@ export default {
   flex-grow: 1;
   padding-top: 120px;
 }
+body {
+  margin: 0;
+}
+li {
+  list-style: none;
+}
 </style>

@@ -26,7 +26,7 @@ export default {
   left: 0;
   width: 100%;
   padding: 16px 0;
-  background: darkslategrey;
-  height: 50px;
+  background: linear-gradient(blue, yellow);
+  height: 60px;
 }
 </style>
