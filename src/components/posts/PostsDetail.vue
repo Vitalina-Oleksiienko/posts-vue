@@ -73,9 +73,18 @@ export default {
 .posts-item {
   &__userId {
     cursor: pointer;
+    display: inline-block;
     font-size: 20px;
     font-weight: 400;
     margin: 0 0 10px 0;
+
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1.1);
+      transition: 250ms ease-in;
+    }
   }
   &__title {
     font-size: 20px;

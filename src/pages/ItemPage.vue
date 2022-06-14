@@ -3,7 +3,7 @@
     <MainContainer>
       <router-link to="/home" class="btn-go-back">go back</router-link>
       <div v-if="post">
-        <h2>Information about post</h2>
+        <h2 class="">Information about post</h2>
         <PostsDetail :details="post"> </PostsDetail>
       </div>
       <div v-for="(postComment, i) in comments" :key="i">
@@ -91,10 +91,12 @@ export default {
 <style lang="scss" scoped>
 .btn-go-back {
   text-decoration: none;
-  float: left;
+  //float: left;
   padding: 10px;
-  // display: block;
-  // text-align: left;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+
   color: darkgreen;
   border: 1px solid darkgreen;
   border-radius: 5px;
@@ -104,5 +106,8 @@ export default {
 .btn-go-back:hover,
 .btn-go-back:focus {
   background: rgba(0, 128, 0, 0.3);
+}
+h2 {
+  margin: 0 0 10px 0;
 }
 </style>

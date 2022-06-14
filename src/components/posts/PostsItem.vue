@@ -61,6 +61,7 @@ export default {
 
   padding: 0 20px;
   margin-bottom: 30px;
+  clear: left;
 
   &__content {
     height: 280px;
@@ -85,6 +86,7 @@ export default {
     font-weight: 400;
     margin: 0 0 10px 0;
   }
+
   &__title {
     font-size: 20px;
     font-weight: 400;
@@ -106,5 +108,10 @@ export default {
     width: 100%;
     height: 100%;
   }
+}
+.posts-item:hover,
+.posts-item:focus {
+  transform: scale(1.04);
+  transition: 250ms ease-in;
 }
 </style>
