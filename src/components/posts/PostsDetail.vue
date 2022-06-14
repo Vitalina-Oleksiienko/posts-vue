@@ -4,10 +4,10 @@
       <div class="posts-item__content">
         <!-- <p class="posts-item__id">ID:{{ details.id }}</p> -->
         <p @click="showDialog" class="posts-item__userId">
-          <i>UserID:</i>{{ details.userId }}
+          <i>UserID:</i> {{ details.userId }}
         </p>
-        <p class="posts-item__title"><i>Title:</i>{{ details.title }}</p>
-        <p class="posts-item__body"><i>Body:</i>{{ details.body }}</p>
+        <p class="posts-item__title"><i>Title:</i> {{ details.title }}</p>
+        <p class="posts-item__body"><i>Body:</i> {{ details.body }}</p>
       </div>
 
       <ModalInfo v-model:show="dialogVisible">

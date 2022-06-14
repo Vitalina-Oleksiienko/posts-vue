@@ -26,7 +26,7 @@ export default {
   padding: 10px;
   text-align: left;
   &__item {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 500;
     margin: 0;
   }
