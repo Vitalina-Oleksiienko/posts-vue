@@ -91,11 +91,18 @@ export default {
 <style lang="scss" scoped>
 .btn-go-back {
   text-decoration: none;
-  display: block;
-  text-align: left;
+  float: left;
+  padding: 10px;
+  // display: block;
+  // text-align: left;
   color: darkgreen;
   border: 1px solid darkgreen;
+  border-radius: 5px;
   font-size: 20px;
   font-weight: 700;
+}
+.btn-go-back:hover,
+.btn-go-back:focus {
+  background: rgba(0, 128, 0, 0.3);
 }
 </style>
