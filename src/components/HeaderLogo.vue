@@ -19,4 +19,14 @@ export default {
   width: 7%;
   height: 50%;
 }
+@media screen and (max-width: 1199.98px) {
+  .logo {
+    width: 12%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .logo {
+    width: 20%;
+  }
+}
 </style>

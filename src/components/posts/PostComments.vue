@@ -21,7 +21,10 @@ export default {
 
 <style lang="scss" scoped>
 .comments-list {
-  border: 2px solid green;
+  border: 3px solid transparent;
+  border-image: linear-gradient(#0b95dd, #f5f564);
+  border-image-slice: 1;
+  border-radius: 5px;
   margin-bottom: 15px;
   padding: 10px;
   text-align: left;

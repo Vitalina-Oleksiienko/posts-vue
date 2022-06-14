@@ -93,10 +93,15 @@ export default {
 }
 .page:hover,
 .page:focus {
-  border: 3px solid darkgreen;
+  border: 3px solid transparent;
+  border-image: linear-gradient(#0b0e7f, #0b95dd);
+  border-image-slice: 1;
   background: linear-gradient(blue, yellow);
+  color: azure;
 }
 .current-page {
-  border: 3px solid darkgreen;
+  border: 3px solid transparent;
+  border-image: linear-gradient(#0b0e7f, #0b95dd);
+  border-image-slice: 1;
 }
 </style>

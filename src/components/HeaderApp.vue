@@ -29,4 +29,9 @@ export default {
   background: linear-gradient(blue, yellow);
   height: 60px;
 }
+@media screen and (max-width: 419.98px) {
+  .header {
+    width: 420px;
+  }
+}
 </style>

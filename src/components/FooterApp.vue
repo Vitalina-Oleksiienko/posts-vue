@@ -13,4 +13,9 @@ export default {
   background: linear-gradient(blue, yellow);
   height: 100px;
 }
+@media screen and (max-width: 419.98px) {
+  .footer {
+    width: 420px;
+  }
+}
 </style>

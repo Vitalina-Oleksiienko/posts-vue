@@ -57,18 +57,22 @@ export default {
 <style lang="scss" scoped>
 .posts-item {
   position: relative;
-  max-width: 350px;
+  flex: 1 0 30%;
+  //max-width: 350px;
+  //width: calc(30% - 10px);
 
-  padding: 0 20px;
-  margin-bottom: 30px;
-  clear: left;
+  //margin: 15px;
+  //max-width: 30%;
+
+  //padding: 0 20px;
+  //margin-bottom: 30px;
 
   &__content {
     height: 280px;
     padding: 20px;
-    border-radius: 5px;
-
-    //min-height: 200px;
+    border: 10px solid transparent;
+    border-image: linear-gradient(#0b0e7f, #0b95dd);
+    border-image-slice: 1;
     text-align: left;
     line-height: 1.4;
 
@@ -78,6 +82,7 @@ export default {
   &__content:hover,
   &__content:focus {
     background: linear-gradient(blue, yellow);
+    color: azure;
   }
   &__id {
     font-size: 20px;
@@ -117,5 +122,17 @@ export default {
 .posts-item:focus {
   transform: scale(1.04);
   transition: 250ms ease-in;
+}
+@media screen and (max-width: 1199.98px) {
+  .posts-item {
+    //width: calc(45% - 10px);
+    flex: 1 0 45%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .posts-item {
+    //width: calc(100% - 5px);
+    flex: 1 0 100%;
+  }
 }
 </style>

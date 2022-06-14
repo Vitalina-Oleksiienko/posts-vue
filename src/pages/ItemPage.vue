@@ -96,9 +96,10 @@ export default {
   justify-content: center;
   width: 100px;
 
-  color: darkgreen;
-  border: 1px solid darkgreen;
-  border-radius: 5px;
+  color: #0b0e7f;
+  border: 3px solid transparent;
+  border-image: linear-gradient(#0b0e7f, #0b95dd);
+  border-image-slice: 1;
   font-size: 20px;
   font-weight: 700;
 }
@@ -108,5 +109,13 @@ export default {
 }
 h2 {
   margin: 0 0 10px 0;
+}
+@media screen and (max-width: 767.98px) {
+  .btn-go-back {
+    display: inline;
+  }
+  h2 {
+    margin: 20px 0 10px 0;
+  }
 }
 </style>

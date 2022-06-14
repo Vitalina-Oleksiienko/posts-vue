@@ -33,13 +33,30 @@ export default {
 <style lang="scss" scoped>
 .posts-list {
   display: flex;
+  //flex-flow: row wrap;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin-left: -15px;
-  margin-right: -15px;
+
+  //align-content: stretch;
+  //justify-content: space-around;
+  gap: 15px;
+  // margin-left: -15px;
+  // margin-right: -15px;
+  min-height: 100vh;
 
   &__item {
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .posts-list {
+    justify-content: center;
+  }
+}
+@media screen and(max-width: 767.98px) {
+  .posts-list {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
   }
 }
 </style>

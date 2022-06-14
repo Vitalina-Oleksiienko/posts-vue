@@ -40,5 +40,8 @@ export default {
   border-radius: 10px;
   min-width: 300px;
   min-height: 50px;
+  border: 10px solid transparent;
+  border-image: linear-gradient(#0b0e7f, #0b95dd);
+  border-image-slice: 1;
 }
 </style>
