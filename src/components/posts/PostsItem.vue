@@ -58,10 +58,12 @@ export default {
 .posts-item {
   position: relative;
   max-width: 350px;
+
   padding: 0 20px;
   margin-bottom: 30px;
 
   &__content {
+    height: 280px;
     padding: 20px;
     border-radius: 5px;
     background: rgb(120, 182, 182);
@@ -76,22 +78,25 @@ export default {
     font-size: 20px;
     font-weight: 400;
     text-decoration: none;
+    margin-bottom: 5px;
   }
   &__userId {
     font-size: 20px;
     font-weight: 400;
-    margin: 0;
+    margin: 0 0 10px 0;
   }
   &__title {
-    font-size: 10px;
+    font-size: 20px;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin: 0 0 10px 0;
+    // max-height: calc(1em * 1.4 * 2);
+    // overflow: hidden;
   }
   &__body {
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 20px;
-    max-height: calc(1em * 1.4 * 4);
+    margin: 0 0 0 0;
+    max-height: calc(1em * 1.4 * 5);
     overflow: hidden;
   }
   &__link {

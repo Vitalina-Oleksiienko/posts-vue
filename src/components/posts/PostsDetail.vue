@@ -2,12 +2,12 @@
   <section>
     <div class="posts-item">
       <div class="posts-item__content">
-        <p class="posts-item__id">ID:{{ details.id }}</p>
+        <!-- <p class="posts-item__id">ID:{{ details.id }}</p> -->
         <p @click="showDialog" class="posts-item__userId">
-          UserID:{{ details.userId }}
+          <i>UserID:</i>{{ details.userId }}
         </p>
-        <p class="posts-item__title">Title:{{ details.title }}</p>
-        <p class="posts-item__body">Body:{{ details.body }}</p>
+        <p class="posts-item__title"><i>Title:</i>{{ details.title }}</p>
+        <p class="posts-item__body"><i>Body:</i>{{ details.body }}</p>
       </div>
 
       <ModalInfo v-model:show="dialogVisible">
@@ -70,7 +70,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.posts-item__userId {
-  cursor: pointer;
+.posts-item {
+  &__userId {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+  }
+  &__body {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+  }
+}
+
+i {
+  font-weight: 600;
 }
 </style>

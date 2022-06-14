@@ -3,7 +3,7 @@
     <MainContainer>
       <router-link to="/home" class="btn-go-back">go back</router-link>
       <div v-if="post">
-        <h2>iformation about post</h2>
+        <h2>Information about post</h2>
         <PostsDetail :details="post"> </PostsDetail>
       </div>
       <div v-for="(postComment, i) in comments" :key="i">
