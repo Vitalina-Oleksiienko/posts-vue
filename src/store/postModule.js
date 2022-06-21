@@ -24,7 +24,7 @@ export const postModule = {
             state.limit = limit;
         },
         
-    },
+    }, 
     actoins: {
         async fetchPosts({state, commit}) {
       try {
@@ -37,7 +37,7 @@ export const postModule = {
             },
           }
         );
-        commit('setPosts', [...state.posts, ...response.data]);
+        commit('setPosts', response.data);
         commit('setTotalPages'.Math.ceil(response.headers["x-total-count"] / state.limit));
       } catch (error) {
         console.error(error);
@@ -45,5 +45,5 @@ export const postModule = {
     },
 
     },
-    namespaced: true
+    namespaced: true,
 }

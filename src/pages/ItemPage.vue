@@ -2,6 +2,7 @@
   <main>
     <MainContainer>
       <router-link to="/home" class="btn-go-back">go back</router-link>
+      <router-link to="/store" class="btn-go-back">store</router-link>
       <div v-if="post">
         <h2 class="">Information about post</h2>
         <PostsDetail :details="post"> </PostsDetail>

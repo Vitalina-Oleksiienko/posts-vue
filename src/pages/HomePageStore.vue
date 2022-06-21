@@ -31,14 +31,14 @@ export default {
     PostsList,
     MainContainer,
   },
-  data() {
-    return {
-      //   posts: null,
-      //   page: 1,
-      //   limit: 10,
-      //   totalPages: 0,
-    };
-  },
+  //   data() {
+  //     return {
+  //       //   posts: null,
+  //       //   page: 1,
+  //       //   limit: 10,
+  //       //   totalPages: 0,
+  //     };
+  //   },
   methods: {
     ...mapMutations({
       setPage: "post/setPage",
@@ -83,9 +83,9 @@ export default {
     }),
   },
   watch: {
-    page() {
-      this.fetchPosts();
-    },
+    // page() {
+    //   this.fetchPosts();
+    // },
   },
 };
 </script>
