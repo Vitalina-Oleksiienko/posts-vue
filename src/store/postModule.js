@@ -27,23 +27,19 @@ export const postModule = {
     }, 
     actions: {
         async fetchPosts({state, commit}) {
-      try {
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/posts",
-          {
-            params: {
-              _page: state.page,
-              _limit: state.limit,
-            },
-          }
-        );
-        commit('setPosts', response.data);
-        commit('setTotalPages'.Math.ceil(response.headers["x-total-count"] / state.limit));
-      } catch (error) {
-        console.log(error);
-      }
+            try {
+                const response = await axios.get("https://jsonplaceholder.typicode.com/posts", {
+                params: {
+                    _page: state.page,
+                    _limit: state.limit,
+                },
+            });
+            commit('setPosts', response.data);
+            commit('setTotalPages'.Math.ceil(response.headers["x-total-count"] / state.limit));
+            } catch (error) {
+            console.log(error);
+        }
     },
-
     },
     namespaced: true,
 }
