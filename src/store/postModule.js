@@ -25,7 +25,7 @@ export const postModule = {
         },
         
     }, 
-    actoins: {
+    actions: {
         async fetchPosts({state, commit}) {
       try {
         const response = await axios.get(
@@ -40,7 +40,7 @@ export const postModule = {
         commit('setPosts', response.data);
         commit('setTotalPages'.Math.ceil(response.headers["x-total-count"] / state.limit));
       } catch (error) {
-        console.error(error);
+        alert('error');
       }
     },
 

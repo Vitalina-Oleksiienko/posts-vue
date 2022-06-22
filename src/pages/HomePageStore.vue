@@ -49,7 +49,7 @@ export default {
 
     changePage(pageNumber) {
       this.page = pageNumber;
-      //this.fetchPosts();
+      this.fetchPosts();
     },
     // async fetchPosts() {
     //   try {
