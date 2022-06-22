@@ -1,8 +1,11 @@
 <template>
   <main>
     <MainContainer>
-      <router-link to="/home" class="btn-go-back">go back</router-link>
-      <router-link to="/store" class="btn-go-back">store</router-link>
+      <div class="btn">
+        <router-link to="/home" class="btn-go-back">go back</router-link>
+        <router-link to="/store" class="btn-go-back">store</router-link>
+      </div>
+
       <div v-if="post">
         <h2 class="">Information about post</h2>
         <PostsDetail :details="post"> </PostsDetail>
@@ -90,8 +93,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.btn {
+  display: flex;
+  flex-direction: row;
+}
 .btn-go-back {
   text-decoration: none;
+  margin-right: 15px;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -112,8 +120,16 @@ h2 {
   margin: 0 0 10px 0;
 }
 @media screen and (max-width: 767.98px) {
+  .btn {
+    flex-direction: column;
+    align-items: center;
+  }
   .btn-go-back {
     display: inline;
+    margin-right: 0;
+  }
+  .btn-go-back:not(:last-child) {
+    margin: 0 0 10px 0;
   }
   h2 {
     margin: 20px 0 10px 0;

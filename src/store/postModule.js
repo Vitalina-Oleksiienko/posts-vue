@@ -40,7 +40,7 @@ export const postModule = {
         commit('setPosts', response.data);
         commit('setTotalPages'.Math.ceil(response.headers["x-total-count"] / state.limit));
       } catch (error) {
-        alert('error');
+        console.log(error);
       }
     },
 

@@ -21,6 +21,7 @@ export default {
   .container {
     // width: 768px;
     max-width: 100%;
+    padding: 0 10px;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -28,7 +29,6 @@ export default {
     // max-width: 420px;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0;
   }
 }
 // @media (min-width: 767.98px) {

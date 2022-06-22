@@ -31,14 +31,7 @@ export default {
     PostsList,
     MainContainer,
   },
-  //   data() {
-  //     return {
-  //       //   posts: null,
-  //       //   page: 1,
-  //       //   limit: 10,
-  //       //   totalPages: 0,
-  //     };
-  //   },
+
   methods: {
     ...mapMutations({
       setPage: "post/setPage",
@@ -51,25 +44,6 @@ export default {
       this.page = pageNumber;
       this.fetchPosts();
     },
-    // async fetchPosts() {
-    //   try {
-    //     const response = await axios.get(
-    //       "https://jsonplaceholder.typicode.com/posts",
-    //       {
-    //         params: {
-    //           _page: this.page,
-    //           _limit: this.limit,
-    //         },
-    //       }
-    //     );
-    //     this.posts = response.data;
-    //     this.totalPages = Math.ceil(
-    //       response.headers["x-total-count"] / this.limit
-    //     );
-    //   } catch (error) {
-    //     console.error(error);
-    //   }
-    // },
   },
   mounted() {
     this.fetchPosts();
