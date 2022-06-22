@@ -2,6 +2,7 @@
   <main class="homepage">
     <MainContainer>
       <PostsList :items="posts" :id="posts" />
+      <!-- <div v-intersect="loadMorePosts" class="observer"></div> -->
       <div class="page__wrapper">
         <div
           v-for="pageNumber in totalPages"
@@ -38,6 +39,7 @@ export default {
     }),
     ...mapActions({
       fetchPosts: "post/fetchPosts",
+      loadMorePosts: "post/loadMorePosts",
     }),
 
     changePage(pageNumber) {

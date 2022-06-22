@@ -8,7 +8,7 @@ export const postModule = {
       totalPages: 0,
     }),
     getters: {
-
+        
     },
     mutations: {
         setPosts(state, posts) {
@@ -35,11 +35,27 @@ export const postModule = {
                 },
             });
             commit('setPosts', response.data);
-            commit('setTotalPages'.Math.ceil(response.headers["x-total-count"] / state.limit));
+            commit('setTotalPages', Math.ceil(response.headers["x-total-count"] / state.limit));
             } catch (error) {
             console.log(error);
         }
-    },
+        },
+        // async loadMorePosts({state, commit}) {
+        //     try {
+        //         commit('setPage', state.page + 1)
+        //         const response = await axios.get('https://jsonplaceholder.typicode.com/posts', {
+        //             params: {
+        //                 _page: state.page,
+        //                 _limit: state.limit
+        //             }
+        //         });
+        //         commit('setTotalPages', Math.ceil(response.headers['x-total-count'] / state.limit))
+        //         commit('setPosts', [...state.posts, ...response.data]);
+        //     } catch (e) {
+        //         console.log(e)
+        //     }
+        // }
+        
     },
     namespaced: true,
 }
