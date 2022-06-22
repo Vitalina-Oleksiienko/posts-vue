@@ -26,14 +26,8 @@ export default {
 }
 @media screen and (max-width: 767.98px) {
   .container {
-    // max-width: 420px;
     max-width: 100%;
     margin: 0 auto;
   }
 }
-// @media (min-width: 767.98px) {
-//   .container {
-//     min-width: 767px;
-//   }
-// }
 </style>
