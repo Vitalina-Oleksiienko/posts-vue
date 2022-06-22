@@ -5,7 +5,6 @@
         <router-link to="/home" class="btn-go-back">go back</router-link>
         <router-link to="/store" class="btn-go-back">store</router-link>
       </div>
-
       <div v-if="post">
         <h2 class="">Information about post</h2>
         <PostsDetail :details="post"> </PostsDetail>
@@ -57,15 +56,6 @@ export default {
     },
   },
 
-  // computed: {
-  //   post() {
-  //     return posts.find((post) => post.id == this.$route.params.id);
-  //   },
-  // },
-  // mounted() {
-  //   console.log(this.post);
-  //   console.log(this.$route);
-  // },
   async created() {
     try {
       this.postId = this.$route.params.id;
@@ -75,16 +65,7 @@ export default {
       console.log(error);
     }
   },
-  // async created() {
-  //   try {
-  //     this.id = this.$route.params.userId;
-  //     const { userInfo } = await getUserInfo(this.id);
-  //     this.info = userInfo;
-  //     console.log(userInfo);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // },
+
   mounted() {
     this.fetchComments();
     this.getPostsById;
