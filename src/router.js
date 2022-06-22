@@ -1,8 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import HomePage from './pages/HomePage.vue';
-import ItemPage from './pages/ItemPage.vue';
-import HomePageStore from './pages/HomePageStore.vue';
 
+const HomePage = () => import ('./pages/HomePage.vue');
+const ItemPage = () => import ('./pages/ItemPage.vue');
+const HomePageStore = () => import ('./pages/HomePageStore.vue');
 
 export default createRouter({
     history: createWebHashHistory(process.env.BASE_URL),
