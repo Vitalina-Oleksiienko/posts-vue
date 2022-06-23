@@ -30,4 +30,10 @@ export default {
     margin: 0 auto;
   }
 }
+@media screen and (max-width: 419.98px) {
+  .container {
+    min-width: 400px;
+    margin: 0 auto;
+  }
+}
 </style>
