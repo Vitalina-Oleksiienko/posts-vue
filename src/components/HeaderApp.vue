@@ -9,7 +9,7 @@
 <script>
 import MainContainer from "../components/shared/MainContainer.vue";
 import HeaderLogo from "../components/HeaderLogo.vue";
-//import MainContainer from "../components/shared/MainContainer.vue";
+
 export default {
   name: "HeaderApp",
   components: {

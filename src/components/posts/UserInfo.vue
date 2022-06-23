@@ -4,9 +4,7 @@
     <p class="user-list__item"><i>Username:</i> {{ info.username }}</p>
     <ul class="user-list__item">
       <i>Address:</i>
-      <li>
-        <i class="user-list__adress">city:</i> {{ info.address.city }}
-      </li>
+      <li><i class="user-list__adress">city:</i> {{ info.address.city }}</li>
       <li>
         <i class="user-list__adress">street:</i> {{ info.address.street }}
       </li>
