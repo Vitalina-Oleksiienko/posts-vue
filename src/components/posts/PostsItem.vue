@@ -1,22 +1,10 @@
 <template>
   <div class="posts-item" @click="go">
     <div class="posts-item__content">
-      <!-- <p class="posts-item__id">
-        ID:
-        {{ id }}
-      </p> -->
-      <p class="posts-item__userId">
-        <i>UserID:</i>
-        {{ userId }}
-      </p>
-      <p class="posts-item__title">
-        <i>Title:</i>
-        {{ title }}
-      </p>
-      <p class="posts-item__body">
-        <i>Body:</i>
-        {{ body }}
-      </p>
+      <!-- <p class="posts-item__id">ID:{{ id }}</p> -->
+      <p class="posts-item__userId"><i>UserID:</i> {{ userId }}</p>
+      <p class="posts-item__title"><i>Title:</i> {{ title }}</p>
+      <p class="posts-item__body"><i>Body:</i> {{ body }}</p>
       <router-link
         :to="{ name: 'post', params: { id, userId }, query: { title } }"
         class="posts-item__link"
