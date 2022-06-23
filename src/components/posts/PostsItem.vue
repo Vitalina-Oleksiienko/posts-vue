@@ -61,12 +61,6 @@ export default {
   //max-width: 350px;
   //width: calc(30% - 10px);
 
-  //margin: 15px;
-  //max-width: 30%;
-
-  //padding: 0 20px;
-  //margin-bottom: 30px;
-
   &__content {
     height: 280px;
     padding: 20px;
