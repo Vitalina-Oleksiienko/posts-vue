@@ -20,7 +20,6 @@
 <script>
 import PostsList from "@/components/posts/PostsList.vue";
 import MainContainer from "@/components/shared/MainContainer.vue";
-//import axios from "axios";
 import { mapState, mapActions, mapMutations } from "vuex";
 
 export default {
