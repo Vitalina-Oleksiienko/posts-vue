@@ -42,7 +42,7 @@ export default {
     justify-content: center;
   }
 }
-@media screen and(max-width: 767.98px) {
+@media screen and (max-width: 767.98px) {
   .posts-list {
     flex-direction: column;
     align-items: center;
