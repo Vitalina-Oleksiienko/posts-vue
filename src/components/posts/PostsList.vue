@@ -36,10 +36,6 @@ export default {
   flex-wrap: wrap;
   gap: 15px;
   min-height: 100vh;
-
-  &__item {
-    //margin-bottom: 30px;
-  }
 }
 @media screen and (max-width: 1199.98px) {
   .posts-list {
