@@ -2,19 +2,16 @@
   <main class="homepage">
     <MainContainer>
       <PostsList :items="posts" :id="posts" />
-      <!-- <div v-intersect="loadMorePosts" class="observer"></div> -->
-      <div class="page__wrapper">
+      <div v-intersection="loadMorePosts" class="load-more"></div>
+      <div>
         <div
           v-for="pageNumber in totalPages"
           :key="pageNumber"
-          class="page"
           :class="{
             'current-page': page == pageNumber,
           }"
           @click="changePage(pageNumber)"
-        >
-          {{ pageNumber }}
-        </div>
+        ></div>
       </div>
     </MainContainer>
   </main>
@@ -42,10 +39,10 @@ export default {
       loadMorePosts: "post/loadMorePosts",
     }),
 
-    changePage(pageNumber) {
-      this.page = pageNumber;
-      this.fetchPosts();
-    },
+    // changePage(pageNumber) {
+    //   this.page = pageNumber;
+    //   //this.fetchPosts();
+    // },
   },
   mounted() {
     this.fetchPosts();
@@ -67,33 +64,36 @@ export default {
 </script>
 
 <style>
+.load-more {
+  margin-bottom: 5px;
+}
 .page__wrapper {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: baseline;
   margin: 10px 0 10px 0;
 
-  cursor: pointer;
+  cursor: pointer; */
 }
 .page {
-  border: 1px solid rgb(23, 65, 23);
+  /* border: 1px solid rgb(23, 65, 23);
   border-radius: 5px 0 5px 0;
-  padding: 10px;
+  padding: 10px; */
 }
 .page:not(:last-child) {
-  margin-right: 5px;
+  /* margin-right: 10px; */
 }
 .page:hover,
 .page:focus {
-  border: 3px solid transparent;
+  /* border: 3px solid transparent;
   border-image: linear-gradient(#0b0e7f, #0b95dd);
   border-image-slice: 1;
   background: linear-gradient(blue, yellow);
-  color: azure;
+  color: azure; */
 }
 .current-page {
-  border: 3px solid transparent;
+  /* border: 3px solid transparent;
   border-image: linear-gradient(#0b0e7f, #0b95dd);
-  border-image-slice: 1;
+  border-image-slice: 1; */
 }
 </style>
