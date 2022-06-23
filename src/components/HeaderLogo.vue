@@ -16,17 +16,8 @@ export default {
 
 <style lang="scss" scoped>
 .logo {
-  width: 7%;
-  height: 50%;
-}
-@media screen and (max-width: 1199.98px) {
-  .logo {
-    width: 12%;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  .logo {
-    width: 20%;
-  }
+  width: 100%;
+  max-width: 80px;
+  height: auto;
 }
 </style>
