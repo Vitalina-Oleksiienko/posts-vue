@@ -9,7 +9,6 @@
         <p class="posts-item__title"><i>Title:</i> {{ details.title }}</p>
         <p class="posts-item__body"><i>Body:</i> {{ details.body }}</p>
       </div>
-
       <ModalInfo v-model:show="dialogVisible">
         <div v-if="infoUser">
           <UserInfo :info="infoUser"></UserInfo>
@@ -20,9 +19,6 @@
 </template>
 
 <script>
-//import axios from "axios";
-//v-bind="infoUser" :key="infoUser"
-//v-for="infoUser in infoUsers" :key="infoUser.id"
 import ModalInfo from "./ModalInfo.vue";
 import UserInfo from "./UserInfo.vue";
 import { getUserInfo } from "@/services/posts.service";
@@ -97,7 +93,6 @@ export default {
     margin: 0 0 10px 0;
   }
 }
-
 i {
   font-weight: 600;
 }
