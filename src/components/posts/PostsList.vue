@@ -33,14 +33,8 @@ export default {
 <style lang="scss" scoped>
 .posts-list {
   display: flex;
-  //flex-flow: row wrap;
   flex-wrap: wrap;
-
-  //align-content: stretch;
-  //justify-content: space-around;
   gap: 15px;
-  // margin-left: -15px;
-  // margin-right: -15px;
   min-height: 100vh;
 
   &__item {
@@ -56,7 +50,7 @@ export default {
   .posts-list {
     flex-direction: column;
     align-items: center;
-    margin: 0 15px;
+    margin: 0 10px;
   }
 }
 </style>
