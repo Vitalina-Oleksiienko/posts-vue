@@ -1,8 +1,10 @@
 import { createRouter, createWebHashHistory } from "vue-router";
+//import ErrorPage from './pages/ErrorPage.vue';
 
 const HomePage = () => import ('./pages/HomePage.vue');
 const ItemPage = () => import ('./pages/ItemPage.vue');
-const HomePageStore = () => import ('./pages/HomePageStore.vue');
+const HomePageStore = () => import('./pages/HomePageStore.vue');
+//const ErrorPage = () => import('./pages/ErrorPage.vue');
 
 export default createRouter({
     history: createWebHashHistory(process.env.BASE_URL),
@@ -23,7 +25,12 @@ export default createRouter({
         path: '/store',
         component: HomePageStore,
         name:'store',
-    }
+    },
+    // {
+    //     path: '/:pathMatch(.*)',
+    //     component: ErrorPage,
+    //     name: 'error-page',
+    // }
     ],   
 })
 
