@@ -15,6 +15,8 @@ export default {
   &__title {
     font-size: 60px;
     text-align: center;
+    height: 100vh;
+    margin: 0;
   }
 }
 </style>
