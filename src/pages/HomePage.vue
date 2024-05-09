@@ -40,7 +40,9 @@ export default {
   },
   methods: {
     changePage(pageNumber) {
+      console.log(pageNumber);
       this.page = pageNumber;
+      console.log(this.page);
       //this.fetchPosts();
     },
     async fetchPosts() {
